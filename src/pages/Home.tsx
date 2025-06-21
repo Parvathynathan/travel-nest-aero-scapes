@@ -1,8 +1,7 @@
-
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, Users, MapPin, Award } from 'lucide-react';
-import AnimatedBackground from '@/components/AnimatedBackground';
+import CoconutTreeBackground from '@/components/CoconutTreeBackground';
 import ParallaxSection from '@/components/ParallaxSection';
 import AnimatedCard from '@/components/AnimatedCard';
 
@@ -63,33 +62,32 @@ const Home = () => {
   }, [testimonials.length]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500"></div>
-        <AnimatedBackground />
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
+        <CoconutTreeBackground />
         
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-gray-800">
             Discover Your
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400 animate-pulse">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600 animate-pulse">
               Next Adventure
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 animate-fade-in-up opacity-90" style={{ animationDelay: '0.3s' }}>
+          <p className="text-xl md:text-2xl mb-8 animate-fade-in-up opacity-90 text-gray-700" style={{ animationDelay: '0.3s' }}>
             Create unforgettable memories with Travel Nest Holidays
           </p>
           <div className="space-x-4">
             <Link
               to="/services"
-              className="inline-block bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full transform hover:scale-105 transition-all duration-300 animate-bounce-in shadow-lg hover:shadow-xl"
+              className="inline-block bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-full transform hover:scale-105 transition-all duration-300 animate-bounce-in shadow-lg hover:shadow-xl"
               style={{ animationDelay: '0.6s' }}
             >
               Explore Packages
             </Link>
             <Link
               to="/contact"
-              className="inline-block border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-full transform hover:scale-105 transition-all duration-300 animate-bounce-in"
+              className="inline-block border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-full transform hover:scale-105 transition-all duration-300 animate-bounce-in"
               style={{ animationDelay: '0.8s' }}
             >
               Plan Your Trip
@@ -97,20 +95,20 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Floating decorative elements */}
+        {/* Floating coconut elements */}
         <div className="absolute top-20 left-10 animate-float">
-          <div className="w-16 h-16 bg-yellow-300 rounded-full opacity-20"></div>
+          <div className="w-8 h-8 bg-amber-200 rounded-full opacity-40"></div>
         </div>
         <div className="absolute top-40 right-20 animate-float-delayed">
-          <div className="w-8 h-8 bg-pink-300 rounded-full opacity-30"></div>
+          <div className="w-6 h-6 bg-green-200 rounded-full opacity-30"></div>
         </div>
         <div className="absolute bottom-20 left-20 animate-float-slow">
-          <div className="w-12 h-12 bg-blue-300 rounded-full opacity-25"></div>
+          <div className="w-10 h-10 bg-blue-200 rounded-full opacity-25"></div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-r from-green-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -134,13 +132,13 @@ const Home = () => {
       </section>
 
       {/* Featured Packages */}
-      <ParallaxSection className="py-20 bg-gradient-to-br from-blue-900 to-purple-900">
+      <ParallaxSection className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedCard className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Featured Holiday Packages
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Discover our most popular destinations and create memories that last a lifetime
             </p>
           </AnimatedCard>
@@ -180,7 +178,7 @@ const Home = () => {
       </ParallaxSection>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-r from-yellow-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-r from-green-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedCard className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -228,11 +226,11 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-green-500 to-blue-500 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full animate-float"></div>
           <div className="absolute top-32 right-20 w-16 h-16 bg-yellow-300 rounded-full animate-float-delayed"></div>
-          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-300 rounded-full animate-float-slow"></div>
+          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-green-300 rounded-full animate-float-slow"></div>
         </div>
         
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
